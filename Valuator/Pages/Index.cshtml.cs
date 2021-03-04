@@ -24,7 +24,7 @@ namespace Valuator.Pages
 
         }
 
-        private int Similarity(string text)
+        private double Similarity(string text)
         {
             var keys = _storage.GetKeys();
             foreach(string idText in keys)
@@ -34,7 +34,6 @@ namespace Valuator.Pages
                     string simpleText = _storage.Load(idText);
                     if (text == simpleText)
                     {
-                        Console.WriteLine("here");
                         return 1;
                     }
                 }
